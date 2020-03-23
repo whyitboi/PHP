@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>contact form</title>
+    </head>
+
+    <body>
+        <h3>Contact Form</h3>
+        <form id="myForm" action="form.php" method="post">
+            <p>
+                <label for="fname">First Name</label>
+                <input name="fname" placeholder="Enter your firstname" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your firstname'" required="" type="text">
+            </p>
+            <p>
+                <label for="lname">Last Name</label>
+                <input name="lname" placeholder="Enter your lastname" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your lastname'" required="" type="text">
+            </p>
+
+           <!--  <p>
+                <label for="phone">Phone Number</label>
+                <input name="phone" placeholder="Enter your number" pattern ="\d{3}\d{3}\d{5}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your number'" required="" type="text">
+            </p> -->
+            
+            <p>
+                <label for="email">Email</label>
+                <input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'"  required="" type="email">
+            </p>
+
+            <p>
+                <label for="department">Department</label>
+                <select name="department">
+                    <option>Select Department</option>
+                    <option>HR</option>
+                    <option>Marketing</option>
+                    <option>Board </option>
+                    <option>Kitchen</option>
+                </select>
+            </p>
+            <p>
+                <label for="gender">Gender</label><br />
+                <input type="radio" name="gender" value="Female"/> Female 
+                <input type="radio" name="gender" value="Male"/> Male
+            </p>
+            <button type="submit" >Submit</button>
+        </form>
+    </body>
+</html>
